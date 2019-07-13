@@ -118,8 +118,7 @@ export default class App extends React.Component {
               <div style={{width: '100%', marginTop: 2}}>
                 <a style={{fontSize: 18, color:'#000', fontFamily: 'Roboto Condensed'}}>{this.state.bio}</a>
               </div>
-              <div>
-
+              <div style={{width: '100%', height: 200}}>
               </div>
             </div>
 
