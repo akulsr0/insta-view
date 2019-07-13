@@ -62,7 +62,7 @@ export default class App extends React.Component {
                 variant="outlined"
                 onChange={value=>{this.setState({username: value.target.value})}}
               />
-              <Button variant="contained" color="primary" style={{background: '#3C40C6'}} onClick={()=>{
+              <Button variant="contained" color="primary" style={{background: '#000'}} onClick={()=>{
                 this.getDataFromApi()
               }}>
                 Search
@@ -90,7 +90,7 @@ export default class App extends React.Component {
                 variant="outlined"
                 onChange={value=>{this.setState({username: value.target.value})}}
               />
-              <Button variant="contained" color="primary" style={{background: '#3C40C6'}} onClick={()=>{
+              <Button variant="contained" color="primary" style={{background: '#000'}} onClick={()=>{
                 this.getDataFromApi()
               }}>
                 Search
@@ -102,7 +102,7 @@ export default class App extends React.Component {
                 <img src={this.state.profilePic} style={{width:'100%', height:'100%', borderRadius: '5%'}} />
               </div>
               <div style={{width: '100%', marginTop: 20}}>
-                <Button variant="contained" color="primary" style={{background: '#3C40C6'}} onClick={()=>{
+                <Button variant="contained" color="primary" style={{background: '#000'}} onClick={()=>{
                   window.open(this.state.profilePic, "_blank");
                 }}>
                   Download Image
