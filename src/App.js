@@ -13,7 +13,8 @@ export default class App extends React.Component {
       profilePic: '',
       followers: '',
       following: '',
-      bio: ''
+      bio: '',
+      postsCount: ''
     }
   }
 
@@ -32,7 +33,8 @@ export default class App extends React.Component {
         var followerCount = objArr.graphql.user.edge_followed_by.count;
         var followingCount = objArr.graphql.user.edge_follow.count;
         var bio = objArr.graphql.user.biography;
-        this.setState({profilePic: picUrl, followers: followerCount, following: followingCount, bio: bio})
+        var postsCount = objArr.graphql.user.edge_owner_to_timeline_media.count;
+        this.setState({profilePic: picUrl, followers: followerCount, following: followingCount, bio: bio, postsCount: postsCount})
         console.log(this.state)
       })
       .catch((error) => {
@@ -106,12 +108,18 @@ export default class App extends React.Component {
                   Download Image
                 </Button>
               </div>
-              <div style={{width: '100%', marginTop: 10}}>
-                <a style={{color:'#000', fontFamily: 'Roboto Condensed'}}>Followers: {this.state.followers}</a>
-                <a style={{color:'#000', fontFamily: 'Roboto Condensed', marginLeft: 10}}>Following: {this.state.following}</a>
+              <div style={{width: '100%', marginTop: 15}}>
+                <a style={{fontSize: 18, color:'#000', fontFamily: 'Roboto Condensed'}}>Posts: {this.state.postsCount}</a>
               </div>
-              <div style={{width: '100%', marginTop: 10}}>
-                <a style={{color:'#000', fontFamily: 'Roboto Condensed'}}>{this.state.bio}</a>
+              <div style={{width: '100%', marginTop: 2}}>
+                <a style={{fontSize: 18, color:'#000', fontFamily: 'Roboto Condensed'}}>Followers: {this.state.followers}</a>
+                <a style={{fontSize: 18, color:'#000', fontFamily: 'Roboto Condensed', marginLeft: 10}}>Following: {this.state.following}</a>
+              </div>
+              <div style={{width: '100%', marginTop: 2}}>
+                <a style={{fontSize: 18, color:'#000', fontFamily: 'Roboto Condensed'}}>{this.state.bio}</a>
+              </div>
+              <div>
+
               </div>
             </div>
 
