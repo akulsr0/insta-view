@@ -17,18 +17,6 @@ export default class App extends React.Component {
       postsCount: '',
       isPrivate: '',
       postsNode: '',
-      posts: {
-        post1: '',
-        post2: '',
-        post3: '',
-        post4: '',
-        post5: '',
-        post6: '',
-        post7: '',
-        post8: '',
-        post9: '',
-        post10: ''
-      }
     }
   }
 
@@ -54,35 +42,6 @@ export default class App extends React.Component {
 
         this.setState({profilePic: picUrl, followers: followerCount, following: followingCount, bio: bio, postsCount: postsCount, isPrivate: isPrivate, postsNode: postsNode})
 
-
-        //Posts Data
-        if(postsNode.length!==0){
-          var postUrl1 = postsNode[0].node.display_url;
-          var postUrl2 = postsNode[1].node.display_url;
-          var postUrl3 = postsNode[2].node.display_url;
-          var postUrl4 = postsNode[3].node.display_url;
-          var postUrl5 = postsNode[4].node.display_url;
-          var postUrl6 = postsNode[5].node.display_url;
-          var postUrl7 = postsNode[6].node.display_url;
-          var postUrl8 = postsNode[7].node.display_url;
-          var postUrl9 = postsNode[8].node.display_url;
-          var postUrl10 = postsNode[9].node.display_url;
-  
-          this.setState({
-            posts: {
-              post1: postUrl1,
-              post2: postUrl2,
-              post3: postUrl3,
-              post4: postUrl4,
-              post5: postUrl5,
-              post6: postUrl6,
-              post7: postUrl7,
-              post8: postUrl8,
-              post9: postUrl9,
-              post10: postUrl10,
-            }
-          })
-        }
 
         console.log(this.state)
 
@@ -170,76 +129,7 @@ export default class App extends React.Component {
                 <a style={{fontSize: 18, color:'#000', fontFamily: 'Roboto Condensed'}}>{this.state.bio}</a>
               </div>
 
-              {/* Recent Posts */}
-
-              <div style={{width: '100%', marginTop: 20, display: 'flex', flexDirection: 'column'}}>
-                <a style={{fontFamily: 'Montserrat'}}>Recent Posts</a>
-               
-                {(() => {
-                  switch (this.state.isPrivate) {
-                    case true:
-                      return (
-                        <div style={{marginTop: 10,}}>
-                          <center><a style={{fontFamily: 'Roboto Condensed'}}>Cannot access posts since it is a private profile.</a></center>
-                        </div>
-                      );
-                      case false:
-
-                      
-                      default:      
-                        return(
-                          <div>
-                            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                              <div>
-                                <div className="postDiv">
-                                  <img src={this.state.posts.post1} style={{width: '100%', height: '100%'}} />
-                                </div>
-                                <a style={{fontFamily: 'Roboto Condensed', textDecoration: 'none', color: '#000'}} href={this.state.posts.post1} target="blank">Download</a>
-                                <div className="postDiv">
-                                  <img src={this.state.posts.post2} style={{width: '100%', height: '100%'}} />
-                                </div>
-                                <a style={{fontFamily: 'Roboto Condensed', textDecoration: 'none', color: '#000'}} href={this.state.posts.post2} target="blank">Download</a>
-                                <div className="postDiv">
-                                  <img src={this.state.posts.post3} style={{width: '100%', height: '100%'}} />
-                                </div>
-                                <a style={{fontFamily: 'Roboto Condensed', textDecoration: 'none', color: '#000'}} href={this.state.posts.post3} target="blank">Download</a>
-                                <div className="postDiv">
-                                  <img src={this.state.posts.post4} style={{width: '100%', height: '100%'}} />
-                                </div>
-                                <a style={{fontFamily: 'Roboto Condensed', textDecoration: 'none', color: '#000'}} href={this.state.posts.post4} target="blank">Download</a>
-                                <div className="postDiv">
-                                  <img src={this.state.posts.post5} style={{width: '100%', height: '100%'}} />
-                                </div>
-                                <a style={{fontFamily: 'Roboto Condensed', textDecoration: 'none', color: '#000'}} href={this.state.posts.post5} target="blank">Download</a>
-                                <div className="postDiv">
-                                  <img src={this.state.posts.post6} style={{width: '100%', height: '100%'}} />
-                                </div>
-                                <a style={{fontFamily: 'Roboto Condensed', textDecoration: 'none', color: '#000'}} href={this.state.posts.post6} target="blank">Download</a>
-                                <div className="postDiv">
-                                  <img src={this.state.posts.post7} style={{width: '100%', height: '100%'}} />
-                                </div>
-                                <a style={{fontFamily: 'Roboto Condensed', textDecoration: 'none', color: '#000'}} href={this.state.posts.post7} target="blank">Download</a>
-                                <div className="postDiv">
-                                  <img src={this.state.posts.post8} style={{width: '100%', height: '100%'}} />
-                                </div>
-                                <a style={{fontFamily: 'Roboto Condensed', textDecoration: 'none', color: '#000'}} href={this.state.posts.post8} target="blank">Download</a>
-                                <div className="postDiv">
-                                  <img src={this.state.posts.post9} style={{width: '100%', height: '100%'}} />
-                                </div>
-                                <a style={{fontFamily: 'Roboto Condensed', textDecoration: 'none', color: '#000'}} href={this.state.posts.post9} target="blank">Download</a>
-                                <div className="postDiv">
-                                  <img src={this.state.posts.post10} style={{width: '100%', height: '100%'}} />
-                                </div>
-                                <a style={{fontFamily: 'Roboto Condensed', textDecoration: 'none', color: '#000'}} href={this.state.posts.post10} target="blank">Download</a>
-                              </div>
-                            </div>
-                          </div>
-                        );
-                  }
-                })()}
-
-              </div>
-
+              
               <div style={{height: 60}}></div>
 
             </div>
