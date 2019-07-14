@@ -12,3 +12,21 @@
   align-items: center;
   font-size: calc(10px + 2vmin);
 }
+
+.postDiv{
+  width: 350px;
+  height: 350px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .postDiv{
+    width: 280px;
+    height: 280px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+}
