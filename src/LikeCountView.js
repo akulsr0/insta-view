@@ -135,11 +135,11 @@ export default class LikeCountView extends Component {
                   </Button>
                 </div>
                 
-                    <div style={{width: '100%', marginTop: 40, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                    <div style={{width: '100%', marginTop: 20, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                         <div style={{width: 250, height: 250}}>
                             <img src={this.state.displayurl} style={{width:'100%', height:'100%', borderRadius: '5%'}} />
                         </div>    
-                        <h3 style={{marginTop: 14}}>Likes: {this.state.likes}</h3>
+                        <h3 style={{marginTop: 14, marginBottom: 50}}>Likes: {this.state.likes}</h3>
                     </div>
                 
                 </header>
