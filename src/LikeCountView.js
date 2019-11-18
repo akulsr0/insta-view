@@ -12,6 +12,7 @@ export default class LikeCountView extends Component {
             likes: null,
             postURL: '',
             data: [],
+            displayurl: ''
         }
     }
 
@@ -26,7 +27,8 @@ export default class LikeCountView extends Component {
             this.state.data = []
             this.setState({data: this.state.data.concat(jsonData.graphql.shortcode_media)})
             var likes = this.state.data[0].edge_media_preview_like.count;
-            this.setState({likes})
+            var displayurl = this.state.data[0].display_url;
+            this.setState({likes ,displayurl})
             console.log(this.state.likes)
         })
         .catch((error) => {
@@ -133,8 +135,11 @@ export default class LikeCountView extends Component {
                   </Button>
                 </div>
                 
-                    <div style={{width: '100%', marginTop: 40}}>
-                        <h3>Likes: {this.state.likes}</h3>
+                    <div style={{width: '100%', marginTop: 40, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                        <div style={{width: 250, height: 250}}>
+                            <img src={this.state.displayurl} style={{width:'100%', height:'100%', borderRadius: '5%'}} />
+                        </div>    
+                        <h3 style={{marginTop: 14}}>Likes: {this.state.likes}</h3>
                     </div>
                 
                 </header>
