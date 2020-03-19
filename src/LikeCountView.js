@@ -42,7 +42,7 @@ export default class LikeCountView extends Component {
                 <div className="App">
                     <header className="App-header">
                     <div style={{marginTop: 20}}>
-                    <a style={{fontSize: 60, fontWeight: 'bold', fontFamily: 'Montserrat'}}>InstaView</a>
+                    <a style={{fontSize: 60, fontWeight: 'bold', fontFamily: 'Montserrat'}}>InsView</a>
                     </div>
     
                     <div style={{width: '100%'}}>
@@ -92,7 +92,7 @@ export default class LikeCountView extends Component {
             <div className="App">
                 <header className="App-header">
                     <div style={{marginTop: 20}}>
-                    <a style={{fontSize: 60, fontWeight: 'bold', fontFamily: 'Montserrat'}}>InstaView</a>
+                    <a style={{fontSize: 60, fontWeight: 'bold', fontFamily: 'Montserrat'}}>InsView</a>
                     </div>
     
                     <div style={{width: '100%'}}>
