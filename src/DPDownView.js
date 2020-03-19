@@ -60,7 +60,7 @@ export default class App extends React.Component {
         <div className="App">
           <header className="App-header">
             <div style={{marginTop: 20}}>
-              <a style={{fontSize: 60, fontWeight: 'bold', fontFamily: 'Montserrat'}}>InstaView</a>
+              <a style={{fontSize: 60, fontWeight: 'bold', fontFamily: 'Montserrat'}}>InsView</a>
             </div>
             <div style={{width: '100%'}}>
                 <nav class="navbar navbar-expand-mg navbar-dark" style={{backgroundColor: '#333'}}>
@@ -105,7 +105,7 @@ export default class App extends React.Component {
         <div className="App">
           <header className="App-header">
             <div style={{marginTop: 20}}>
-              <a style={{fontSize: 60, fontWeight: 'bold', fontFamily: 'Montserrat'}}>InstaView</a>
+              <a style={{fontSize: 60, fontWeight: 'bold', fontFamily: 'Montserrat'}}>InsView</a>
             </div>
             
 <div style={{width: '100%'}}>
