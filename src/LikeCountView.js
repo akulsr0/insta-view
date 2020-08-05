@@ -58,6 +58,19 @@ export default class LikeCountView extends Component {
                         <li class="nav-item">
                             <NavLink style={{ textDecoration: "none", color: "#fff", fontWeight: "bold", padding: 10}} to="/check-likes">Check Like Count</NavLink>
                         </li>
+                        <li>
+                          <a
+                            href='https://play.google.com/store/apps/details?id=com.akul.inshashtags'
+                            style={{
+                              textDecoration: 'none',
+                              color: '#fff',
+                              fontWeight: 'bold',
+                              padding: 10,
+                            }}
+                          >
+                            InsHashtags
+                          </a>
+                        </li>
                         </ul>
                         </div>
                     </nav>
